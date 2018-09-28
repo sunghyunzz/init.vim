@@ -61,6 +61,7 @@ setlocal spelllang=en_us
 filetype plugin on
 au FileType make setl ts=4 sw=4 sts=4 noet
 au FileType scala setl ts=2 sw=2 sts=2
+au FileType yaml setl ts=2 sw=2 sts=2
 au FileType gitcommit setl spell
 
 set colorcolumn=80
