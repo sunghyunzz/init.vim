@@ -31,6 +31,10 @@ let g:deoplete#enable_at_startup = 1
 
 Plug 'zchee/deoplete-jedi'
 Plug 'Shougo/neco-vim'
+Plug 'hashivim/vim-vagrant'
+Plug 'pearofducks/ansible-vim'
+Plug 'chr4/nginx.vim'
+Plug 'hashivim/vim-hashicorp-tools'
 
 set completeopt+=noinsert
 
@@ -63,6 +67,7 @@ au FileType make setl ts=4 sw=4 sts=4 noet
 au FileType scala setl ts=2 sw=2 sts=2
 au FileType yaml setl ts=2 sw=2 sts=2
 au FileType gitcommit setl spell
+au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 
 set colorcolumn=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#FFD9D9
