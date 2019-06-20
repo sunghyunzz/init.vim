@@ -19,22 +19,10 @@ let NERDTreeMinimalUI  = 1
 let NERDTreeDirArrows  = 1
 let NERDTreeShowHidden = 1
 
-Plug 'scrooloose/syntastic'
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list            = 0
-let g:syntastic_check_on_open            = 1
-let g:syntastic_check_on_wq              = 0
-let g:syntastic_cpp_compiler_options     = ' -std = c++11'
+Plug 'derekwyatt/vim-scala'
+au BufRead,BufNewFile *.sbt set filetype=scala
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-let g:deoplete#enable_at_startup = 1
-
-Plug 'zchee/deoplete-jedi'
-Plug 'Shougo/neco-vim'
-Plug 'hashivim/vim-vagrant'
-Plug 'pearofducks/ansible-vim'
-Plug 'chr4/nginx.vim'
-Plug 'hashivim/vim-hashicorp-tools'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 set completeopt+=noinsert
 
@@ -67,7 +55,6 @@ au FileType make setl ts=4 sw=4 sts=4 noet
 au FileType scala setl ts=2 sw=2 sts=2
 au FileType yaml setl ts=2 sw=2 sts=2
 au FileType gitcommit setl spell
-au BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 
 set colorcolumn=80
 highlight OverLength ctermbg=red ctermfg=white guibg=#FFD9D9
