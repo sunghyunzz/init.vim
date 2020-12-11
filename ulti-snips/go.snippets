@@ -1,0 +1,45 @@
+snippet grpcmiddleware
+grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
+endsnippet
+
+snippet grpclogrus
+grpc_logrus "github.com/grpc-ecosystem/go-grpc-middleware/logging/logrus"
+endsnippet
+
+snippet grpcrecovery
+grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
+endsnippet
+
+snippet grpcctxtags
+grpc_ctxtags "github.com/grpc-ecosystem/go-grpc-middleware/tags"
+endsnippet
+
+snippet idl
+"github.com/rainist/idl/gen/go/apis/
+endsnippet
+
+snippet idlext
+"github.com/rainist/idl/gen/go/apis/external/v1/${1:service}"
+endsnippet
+
+snippet handler
+type ${1}HandlerFunc func (ctx context.Context, req *${2}.$1Request) (*$2.$1Response, error)
+
+func $1() $1HandlerFunc {
+	return func(ctx context.Context, req *$2.$1Request) (*$2.$1Response, error) {
+	return &$2.$1Response{}, nil
+	}
+}
+endsnippet
+
+snippet imp.assert 
+"github.com/stretchr/testify/assert"
+endsnippet
+
+snippet grpc.rec
+grpc_recovery "github.com/grpc-ecosystem/go-grpc-middleware/recovery"
+endsnippet
+
+snippet bs 
+"github.com/rainist/go-banksalad"
+endsnippet
